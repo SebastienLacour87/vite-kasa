@@ -1,7 +1,11 @@
-import React from "react";
+import Header from "../Components/Header";
 
 const Logement = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
 
 export default Logement;

@@ -1,9 +1,16 @@
-import React from "react";
+import Logo from "./Logo";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div>
-      <h1>Bonjour</h1>
+    <div className="header-container">
+      <Logo className="header-logo" />
+      <div className="nav-container">
+        <NavLink to="/" end>
+          Accueil
+        </NavLink>
+        <NavLink to="/About">A Propos</NavLink>
+      </div>
     </div>
   );
 };
