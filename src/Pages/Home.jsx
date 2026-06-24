@@ -1,7 +1,7 @@
 import Banner from "../Components/Banner";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
-import Cards from "../Components/Cards";
+import Card from "../Components/Card";
 import logements from "../logements.json";
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
       <Banner />
       <div className="logements-list">
         {logements.map((logement) => (
-          <Cards key={logement.id} logement={logement} />
+          <Card key={logement.id} logement={logement} />
         ))}
       </div>
       <Footer />
