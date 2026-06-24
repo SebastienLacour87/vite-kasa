@@ -10,4 +10,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
+
+  @include mobile {
+    padding: 0 20px;
+    background: none;
+    grid-template-columns: (1fr);
+    gap: 22px;
+  }
 }

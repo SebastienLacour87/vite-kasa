@@ -11,6 +11,16 @@
   margin: 0 auto;
   padding: 0 100px;
   box-sizing: border-box;
+
+  @include mobile {
+    padding: 0 20px;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
 }
 
 * {
@@ -21,3 +31,4 @@
 }
 
 $primary-color: #ff6060;
+$breakpoint-mobile: 768px;

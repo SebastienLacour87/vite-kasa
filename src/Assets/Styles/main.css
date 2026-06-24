@@ -22,7 +22,28 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
 }
+@media (max-width: 768px) {
+  .logements-list {
+    padding: 0 20px;
+    background: none;
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
 
+.header-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 20px;
+  }
+}
 .header-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,13 +51,14 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 100px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 50px auto;
+  margin-top: 45px;
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .header-container {
+    margin-top: 27px;
+    margin-bottom: 20px;
+  }
 }
 .header-container .nav-container {
   display: -webkit-box;
@@ -47,11 +69,21 @@
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 768px) {
+  .header-container .nav-container {
+    gap: 26px;
+  }
+}
 .header-container .nav-container a {
   text-decoration: none;
   color: black;
   font-weight: bold;
   font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .header-container .nav-container a {
+    font-size: 0.75rem;
+  }
 }
 .header-container .nav-container a.active {
   text-decoration: underline;
@@ -59,6 +91,12 @@
 
 .header-logo {
   color: #ff6060;
+}
+@media (max-width: 768px) {
+  .header-logo {
+    width: 145px;
+    height: 46.88px;
+  }
 }
 
 .footer-container {
@@ -83,14 +121,28 @@
 }
 .footer-container .footer-logo {
   color: white;
-  width: 122px;
-  height: 39.44px;
+  width: 145px;
+  height: 46.88px;
   margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .footer-container .footer-logo {
+    width: 122px;
+    height: 39.44px;
+    margin-bottom: 5px;
+  }
 }
 .footer-container p {
   font-size: 1.5rem;
   color: white;
   line-height: 143%;
+}
+@media (max-width: 768px) {
+  .footer-container p {
+    font-size: 0.75rem;
+    width: 133.59px;
+    padding: 0 15px;
+  }
 }
 
 .banner {
@@ -100,10 +152,34 @@
   padding: 0 100px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .banner {
+    padding: 0 20px;
+  }
+}
+.banner {
   margin-bottom: 50px;
   position: relative;
   border-radius: 25px;
+}
+@media (max-width: 768px) {
+  .banner {
+    margin-bottom: 22px;
+    border-radius: 10px;
+  }
+}
+.banner .banner-clip {
+  position: relative;
+  border-radius: 25px;
   overflow: hidden;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 768px) {
+  .banner .banner-clip {
+    border-radius: 10px;
+  }
 }
 .banner img {
   width: 100%;
@@ -111,28 +187,51 @@
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
-  border-radius: 25px;
+}
+@media (max-width: 768px) {
+  .banner img {
+    height: 111px;
+  }
 }
 .banner .banner-overlay {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  max-width: 1240px;
-  height: 223px;
-  margin: auto auto;
+  border: 1px solid black;
   border-radius: 25px;
+}
+@media (max-width: 768px) {
+  .banner .banner-overlay {
+    border-radius: 10px;
+  }
 }
 .banner h1 {
   position: absolute;
+  width: 733px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: #fff;
   margin: 0;
-  z-index: 1;
+  text-align: center;
   font-size: 3rem;
+  font-weight: 700;
   line-height: 143%;
+}
+@media (max-width: 768px) {
+  .banner h1 {
+    top: 31px;
+    left: 16px;
+    right: 75px;
+    width: 225px;
+    height: 48px;
+    -webkit-transform: none;
+            transform: none;
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 100%;
+  }
 }
 
 .card {
@@ -156,11 +255,12 @@
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.41) 41%, rgb(0, 0, 0) 100%);
 }
 .card h2 {
+  width: 75%;
   position: absolute;
   bottom: 16px;
   left: 16px;
   color: #fff;
   margin: 0;
   line-height: 143%;
-  font-size: 1.125rem;
+  font-size: 18px;
 }/*# sourceMappingURL=main.css.map */
