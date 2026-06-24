@@ -6,10 +6,7 @@ const Banner = () => {
       <div className="banner-clip">
         <img src={bannerImage} alt="photo d'une côte rocheuse" />
         <div className="banner-overlay">
-          <h1>
-            Chez vous,
-            <br /> partout et ailleurs
-          </h1>
+          <h1>Chez vous, partout et ailleurs</h1>
         </div>
       </div>
     </div>
