@@ -7,7 +7,7 @@ import bannerImage from "../Assets/images/4706e7dde270fc8fc902a1eb738458e7b29c18
 
 const Home = () => {
   return (
-    <div>
+    <div className="page">
       <Header />
       <Banner
         image={bannerImage}

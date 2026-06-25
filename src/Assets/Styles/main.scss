@@ -8,3 +8,8 @@
 @use "./Components/banner";
 @use "./Components/card";
 @use "./Components/collapse";
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

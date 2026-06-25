@@ -28,7 +28,7 @@ const About = () => {
     },
   ];
   return (
-    <div>
+    <div className="page">
       <Header />
       <Banner
         image={bannerImage}
