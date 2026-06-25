@@ -1,0 +1,58 @@
+@use "../settings" as *;
+.collapse {
+  margin-bottom: 30px;
+  border-radius: 10px;
+
+  &.open .collapse-header {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  &.open .collapse-content {
+    grid-template-rows: 1fr;
+  }
+
+  &.open svg {
+    transform: rotate(180deg);
+  }
+
+  &.open p {
+    padding: 10px 20px;
+  }
+}
+.collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: $primary-color;
+  color: white;
+  border-radius: inherit;
+  padding: 10px 20px 10px 15px;
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 143%;
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+}
+
+.collapse-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+  background: #fbfbfb;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  p {
+    overflow: hidden;
+    padding: 0 20px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 143%;
+  }
+}

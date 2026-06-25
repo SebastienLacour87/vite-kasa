@@ -31,6 +31,11 @@
   }
 }
 
+.section-collapse {
+  max-width: 1023px;
+  margin: 0 auto;
+}
+
 .header-container {
   width: 100%;
   max-width: 1440px;
@@ -196,7 +201,6 @@
 .banner .banner-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
   border: 1px solid black;
   border-radius: 25px;
 }
@@ -251,8 +255,8 @@
 .card .card-overlay {
   position: absolute;
   inset: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(41%, rgba(0, 0, 0, 0.41)), to(rgb(0, 0, 0)));
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.41) 41%, rgb(0, 0, 0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0.25)), to(rgb(0, 0, 0)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 75%, rgb(0, 0, 0) 100%);
 }
 .card h2 {
   width: 75%;
@@ -263,4 +267,69 @@
   margin: 0;
   line-height: 143%;
   font-size: 18px;
+}
+
+.collapse {
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+.collapse.open .collapse-header {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.collapse.open .collapse-content {
+  grid-template-rows: 1fr;
+}
+.collapse.open svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.collapse.open p {
+  padding: 10px 20px;
+}
+
+.collapse-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  background: #ff6060;
+  color: white;
+  border-radius: inherit;
+  padding: 10px 20px 10px 15px;
+}
+.collapse-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 143%;
+}
+.collapse-header svg {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.collapse-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  -webkit-transition: grid-template-rows 0.3s ease;
+  transition: grid-template-rows 0.3s ease;
+  transition: grid-template-rows 0.3s ease, -ms-grid-rows 0.3s ease;
+  background: #fbfbfb;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.collapse-content p {
+  overflow: hidden;
+  padding: 0 20px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 143%;
 }/*# sourceMappingURL=main.css.map */
