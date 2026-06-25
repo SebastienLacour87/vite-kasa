@@ -3,4 +3,8 @@
 .section-collapse {
   max-width: 1023px;
   margin: 0 auto;
+
+  @include mobile {
+    padding: 0 20px;
+  }
 }

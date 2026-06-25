@@ -35,6 +35,11 @@
   max-width: 1023px;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .section-collapse {
+    padding: 0 20px;
+  }
+}
 
 .header-container {
   width: 100%;
@@ -273,6 +278,12 @@
   margin-bottom: 30px;
   border-radius: 10px;
 }
+@media (max-width: 768px) {
+  .collapse {
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+}
 .collapse.open .collapse-header {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -304,16 +315,32 @@
   border-radius: inherit;
   padding: 10px 20px 10px 15px;
 }
+@media (max-width: 768px) {
+  .collapse-header {
+    height: 30px;
+    padding: 10px;
+  }
+}
 .collapse-header h2 {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 143%;
+}
+@media (max-width: 768px) {
+  .collapse-header h2 {
+    font-size: 13px;
+  }
 }
 .collapse-header svg {
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+@media (max-width: 768px) {
+  .collapse-header svg {
+    width: 16px;
+  }
 }
 
 .collapse-content {
@@ -323,8 +350,8 @@
   transition: grid-template-rows 0.3s ease;
   transition: grid-template-rows 0.3s ease, -ms-grid-rows 0.3s ease;
   background: #fbfbfb;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .collapse-content p {
   overflow: hidden;
@@ -332,4 +359,9 @@
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 143%;
+}
+@media (max-width: 768px) {
+  .collapse-content p {
+    font-size: 0.75rem;
+  }
 }/*# sourceMappingURL=main.css.map */

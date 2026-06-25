@@ -2,6 +2,10 @@
 .collapse {
   margin-bottom: 30px;
   border-radius: 10px;
+  @include mobile {
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
 
   &.open .collapse-header {
     border-bottom-left-radius: 5px;
@@ -29,14 +33,25 @@
   color: white;
   border-radius: inherit;
   padding: 10px 20px 10px 15px;
+  @include mobile {
+    height: 30px;
+    padding: 10px;
+  }
   h2 {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 143%;
+
+    @include mobile {
+      font-size: 13px;
+    }
   }
 
   svg {
     transition: transform 0.3s ease;
+    @include mobile {
+      width: 16px;
+    }
   }
 }
 
@@ -45,8 +60,8 @@
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.3s ease;
   background: #fbfbfb;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 
   p {
     overflow: hidden;
@@ -54,5 +69,9 @@
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 143%;
+
+    @include mobile {
+      font-size: 0.75rem;
+    }
   }
 }
