@@ -1,12 +1,13 @@
-import bannerImage from "../Assets/images/4706e7dde270fc8fc902a1eb738458e7b29c1899.jpg";
-
-const Banner = () => {
+const Banner = ({ image, alt, title, overlayOpacity = 0.6 }) => {
   return (
     <div className="banner">
       <div className="banner-clip">
-        <img src={bannerImage} alt="photo d'une côte rocheuse" />
-        <div className="banner-overlay">
-          <h1>Chez vous, partout et ailleurs</h1>
+        <img src={image} alt={alt} />
+        <div
+          className="banner-overlay"
+          style={{ backgroundColor: `rgba(0, 0, 0, ${overlayOpacity})` }}
+        >
+          {title && <h1>{title}</h1>}
         </div>
       </div>
     </div>
