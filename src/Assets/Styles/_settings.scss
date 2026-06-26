@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "montserra";
+  font-family: "montserrat";
   src: url("../font/Montserrat-VariableFont_wght.ttf");
   font-weight: 100, 900;
   font-display: swap;
@@ -27,8 +27,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "montserra", sans-serif;
+  font-family: "montserrat", sans-serif;
 }
 
 $primary-color: #ff6060;
 $breakpoint-mobile: 768px;
+$line-height-base: 143%;
