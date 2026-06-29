@@ -9,7 +9,13 @@ const Logement = () => {
   return (
     <div className="page">
       <Header />
-      <Slideshow pictures={logement.pictures} title={logement.title} />
+      <div className="logement-container">
+        <Slideshow pictures={logement.pictures} title={logement.title} />
+        <h1>{logement.title}</h1>
+        <p>{logement.host.name}</p>
+        <p>{logement.location}</p>
+      </div>
+
       <Footer />
     </div>
   );

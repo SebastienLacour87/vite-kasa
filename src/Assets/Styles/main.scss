@@ -8,6 +8,8 @@
 @use "./Components/banner";
 @use "./Components/card";
 @use "./Components/collapse";
+@use "./Components/slideshow";
+
 .page {
   min-height: 100vh;
   display: flex;

@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "montserra";
+  font-family: "montserrat";
   src: url("../font/Montserrat-VariableFont_wght.ttf");
   font-weight: 100, 900;
   font-display: swap;
@@ -9,7 +9,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "montserra", sans-serif;
+  font-family: "montserrat", sans-serif;
 }
 
 .logements-list {
@@ -39,6 +39,20 @@
 }
 @media (max-width: 768px) {
   .section-collapse {
+    padding: 0 20px;
+  }
+}
+
+.logement-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .logement-container {
     padding: 0 20px;
   }
 }
@@ -446,6 +460,55 @@
   .collapse-content p {
     font-size: 0.75rem;
   }
+}
+
+.slideshow {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.slideshow img {
+  width: 100%;
+  height: 415px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 30px;
+  border-radius: 25px;
+}
+.slideshow .slideshow-counter {
+  position: absolute;
+  z-index: 1;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 44.95px;
+  left: 50%;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: white;
+}
+.slideshow svg {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 96px;
+  cursor: pointer;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.slideshow svg:first-of-type {
+  left: 0;
+}
+.slideshow svg:last-of-type {
+  right: 0;
 }
 
 .page {
