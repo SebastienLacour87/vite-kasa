@@ -1,4 +1,76 @@
 @use "../settings" as *;
 .logement-container {
   @include container;
+
+  .grid-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+
+    .left-container {
+      h1 {
+        font-size: 2.25rem;
+        font-weight: 500;
+        color: $primary-color;
+        line-height: $line-height-base;
+      }
+      p {
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: $line-height-base;
+        margin-bottom: 20px;
+      }
+      ul {
+        display: flex;
+        gap: 10px;
+      }
+      li {
+        list-style: none;
+        background-color: $primary-color;
+        border-radius: 10px;
+        padding: 5px 30px;
+        color: white;
+        font-size: 0.875rem;
+        font-weight: 700;
+        line-height: $line-height-base;
+        text-align: center;
+      }
+    }
+    .right-container {
+      .host-container {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: $line-height-base;
+        text-align: right;
+        color: $primary-color;
+      }
+      .host-picture {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+      }
+      div.host-picture {
+        background-color: #c4c4c4;
+      }
+    }
+    .rating-container {
+      display: flex;
+      justify-content: flex-end;
+      gap: 15px;
+      .filled {
+        color: $primary-color;
+      }
+      .empty {
+        color: #e3e3e3;
+      }
+    }
+  }
 }

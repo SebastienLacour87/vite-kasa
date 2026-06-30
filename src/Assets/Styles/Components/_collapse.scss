@@ -20,7 +20,8 @@
     transform: rotate(180deg);
   }
 
-  &.open p {
+  &.open p,
+  &.open ul {
     padding: 10px 20px;
   }
 }
@@ -63,12 +64,14 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 
-  p {
+  p,
+  ul {
     overflow: hidden;
     padding: 0 20px;
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 143%;
+    list-style: none;
 
     @include mobile {
       font-size: 0.75rem;

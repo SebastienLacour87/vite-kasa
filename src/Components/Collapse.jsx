@@ -2,6 +2,15 @@ import { useState } from "react";
 
 const Collapse = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const renderContent = Array.isArray(content) ? (
+    <ul>
+      {content.map((c, index) => (
+        <li key={index}>{c}</li>
+      ))}{" "}
+    </ul>
+  ) : (
+    <p>{content}</p>
+  );
 
   return (
     <div className={`collapse ${isOpen ? "open" : ""}`}>
@@ -24,9 +33,7 @@ const Collapse = ({ title, content }) => {
           />
         </svg>
       </div>
-      <div className="collapse-content">
-        <p>{content}</p>
-      </div>
+      <div className="collapse-content">{renderContent}</div>
     </div>
   );
 };
