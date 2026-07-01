@@ -4,9 +4,16 @@ import Slideshow from "../Components/Slideshow";
 import Collapse from "../Components/Collapse";
 import logements from "../logements.json";
 import { useParams } from "react-router-dom";
+import Error from "./Error";
+
 const Logement = () => {
   const { id } = useParams();
+
   const logement = logements.find((l) => l.id === id);
+  if (logement == undefined) {
+    return <Error />;
+  }
+
   const renderImage = logement.host.picture ? (
     <img
       src={logement.host.picture}

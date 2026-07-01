@@ -12,6 +12,10 @@
     object-fit: cover;
     margin-bottom: 30px;
     border-radius: 25px;
+    @include mobile {
+      height: 255px;
+      border-radius: 10px;
+    }
   }
   .slideshow-counter {
     position: absolute;
@@ -22,6 +26,10 @@
     font-size: 1.125rem;
     font-weight: 500;
     color: white;
+
+    @include mobile {
+      display: none;
+    }
   }
   svg {
     position: absolute;
@@ -30,6 +38,11 @@
     cursor: pointer;
     top: 50%;
     transform: translateY(-50%);
+
+    @include mobile {
+      width: 24px;
+      height: 24px;
+    }
 
     &:first-of-type {
       left: 0;
